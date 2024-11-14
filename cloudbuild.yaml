@@ -1,0 +1,8 @@
+steps:
+  # Construye la imagen Docker
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/caso_estudio_2:v1', '-f', 'contenedor/dockerfile', '.']
+  
+  # Publica la imagen en Google Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/caso_estudio_2:v1']
