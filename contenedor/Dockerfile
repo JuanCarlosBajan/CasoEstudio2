@@ -5,13 +5,13 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copia los archivos necesarios al contenedor
-COPY requirements.txt requirements.txt
+COPY ./contenedor/requirements.txt requirements.txt
 
 # Instala las dependencias
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copia el código de la aplicación
-COPY app.py app.py
+COPY ./contenedor/app.py app.py
 
 # Expone el puerto en el que corre la API
 EXPOSE 8080
