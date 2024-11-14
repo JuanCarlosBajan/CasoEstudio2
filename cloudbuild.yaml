@@ -6,4 +6,3 @@ steps:
 options:
   logging: CLOUD_LOGGING_ONLY
   logsBucket: "gs://citric-celerity-315901-build-logs"
-  
