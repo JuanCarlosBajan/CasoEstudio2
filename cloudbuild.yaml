@@ -6,3 +6,5 @@ steps:
   # Publica la imagen en Google Container Registry
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/caso_estudio_2:v1']
+
+    
