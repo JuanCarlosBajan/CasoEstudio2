@@ -5,4 +5,3 @@ steps:
     args: ['push', 'gcr.io/$PROJECT_ID/caso_estudio_2:v1']
 options:
   logging: CLOUD_LOGGING_ONLY
-  logsBucket: "gs://citric-celerity-315901-build-logs"
