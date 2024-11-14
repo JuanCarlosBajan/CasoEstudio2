@@ -5,3 +5,4 @@ steps:
     args: ['push', 'gcr.io/$PROJECT_ID/caso_estudio_2:v1']
 options:
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
+  
