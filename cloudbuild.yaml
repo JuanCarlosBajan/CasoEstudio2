@@ -1,6 +1,6 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/caso_estudio_2:v1', '-f', 'contenedor/dockerfile', '.']
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/caso_estudio_2:v1', '-f', 'contenedor/Dockerfile', '.']
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/caso_estudio_2:v1']
 options:
