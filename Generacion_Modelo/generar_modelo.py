@@ -93,5 +93,5 @@ joblib.dump(modelo, './Generacion_Modelo/modelo_entrenado.pkl')
 print("\nEl modelo entrenado ha sido guardado en 'modelo_entrenado.pkl'.")
 
 # Guardar el modelo en un archivo llamado 'modelo_entrenado.pkl'
-joblib.dump(modelo, './Contenedor/model.pkl')
+joblib.dump(modelo, './contenedor/model.pkl')
 print("\nEl modelo entrenado ha sido guardado en 'modelo_entrenado.pkl'.")
