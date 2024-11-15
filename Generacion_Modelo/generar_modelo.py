@@ -81,7 +81,7 @@ r2 = r2_score(y_test, y_pred)
 resultados = pd.DataFrame({'Valor Real': y_test, 'Predicción': y_pred})
 
 # 7.2. Guardar los resultados en un archivo CSV
-resultados.to_csv('./Generación_Modelo/resultados_prediccion.csv', index=False, encoding='utf-8-sig')
+resultados.to_csv('./Generacion_Modelo/resultados_prediccion.csv', index=False, encoding='utf-8-sig')
 print("\nLos resultados de la predicción han sido guardados en 'resultados_prediccion.csv'.")
 
 # 8. Guardar el Modelo Entrenado en un Archivo
@@ -89,7 +89,7 @@ print("\nLos resultados de la predicción han sido guardados en 'resultados_pred
 import joblib
 
 # Guardar el modelo en un archivo llamado 'modelo_entrenado.pkl'
-joblib.dump(modelo, './Generación_Modelo/modelo_entrenado.pkl')
+joblib.dump(modelo, './Generacion_Modelo/modelo_entrenado.pkl')
 print("\nEl modelo entrenado ha sido guardado en 'modelo_entrenado.pkl'.")
 
 # Guardar el modelo en un archivo llamado 'modelo_entrenado.pkl'
