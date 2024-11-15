@@ -1,14 +1,19 @@
 steps:
-  # Paso 1: Ejecutar el script de Python para generar el modelo
+  # Paso 1: Instalar las dependencias necesarias
+  - name: 'python'
+    entrypoint: 'pip'
+    args: ['install', '-r', 'Generacion_Modelo/requirements.txt']
+
+  # Paso 2: Ejecutar el script de Python para generar el modelo
   - name: 'python'
     entrypoint: 'python3'
-    args: ['Generación_Modelo/model_training.py']
+    args: ['Generacion_Modelo/generar_modelo.py']
 
-  # Paso 2: Construir la imagen Docker
+  # Paso 3: Construir la imagen Docker
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/caso_estudio_2:v1', '-f', 'contenedor/Dockerfile', '.']
 
-  # Paso 3: Publicar la imagen en Google Container Registry
+  # Paso 4: Publicar la imagen en Google Container Registry
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/caso_estudio_2:v1']
 
