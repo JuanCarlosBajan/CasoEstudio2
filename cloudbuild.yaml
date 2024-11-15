@@ -2,7 +2,7 @@ steps:
   # Paso 1: Ejecutar el script de Python para generar el modelo
   - name: 'python'
     entrypoint: 'python3'
-    args: ['./Generacion_Modelo/generar_modelo.py']
+    args: ['./Generacion_Modelo/modelo_training.py']
 
   # Paso 2: Construir la imagen Docker
   - name: 'gcr.io/cloud-builders/docker'
