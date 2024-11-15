@@ -88,10 +88,10 @@ print("\nLos resultados de la predicción han sido guardados en 'resultados_pred
 
 import joblib
 
-# Guardar el modelo en un archivo llamado 'modelo_entrenado.pkl'
+# Guardar el modelo en un archivo llamado 'model.pkl'
 joblib.dump(modelo, './Generacion_Modelo/model.pkl')
-print("\nEl modelo entrenado ha sido guardado en 'modelo_entrenado.pkl'.")
+print("\nEl modelo entrenado ha sido guardado en 'model.pkl'.")
 
-# Guardar el modelo en un archivo llamado 'modelo_entrenado.pkl'
+# Guardar el modelo en un archivo llamado 'model.pkl'
 joblib.dump(modelo, './contenedor/model.pkl')
-print("\nEl modelo entrenado ha sido guardado en 'modelo_entrenado.pkl'.")
+print("\nEl modelo entrenado ha sido guardado en 'model.pkl'.")
