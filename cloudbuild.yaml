@@ -1,7 +1,16 @@
 steps:
+  # Paso 1: Ejecutar el script de Python para generar el modelo
+  - name: 'python'
+    entrypoint: 'python3'
+    args: ['./Generacion_Modelo/generar_modelo.py']
+
+  # Paso 2: Construir la imagen Docker
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/caso_estudio_2:v1', '-f', 'contenedor/Dockerfile', '.']
+
+  # Paso 3: Publicar la imagen en Google Container Registry
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/caso_estudio_2:v1']
+
 options:
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
