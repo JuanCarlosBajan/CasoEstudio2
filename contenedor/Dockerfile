@@ -13,8 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copia el código de la aplicación
 COPY ./contenedor/app.py app.py
 
-# Copia el modelo generado al contenedor
-COPY ./contenedor/modelo.pkl modelo.pkl
+# Copia el modelo al contenedor
+COPY ./contenedor/model.pkl model.pkl
 
 # Expone el puerto en el que corre la API
 EXPOSE 8080
